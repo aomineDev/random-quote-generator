@@ -1,0 +1,11 @@
+/* HEADER */
+
+.header {
+  position: relative;
+  height: 100px;
+  background-color: var(--color-light);
+  display: grid;
+  place-items: center;
+  height: 100px;
+  transition: background-color .3s;
+}

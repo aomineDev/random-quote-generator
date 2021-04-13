@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="https://aomineDev.github.io/ico/aomine.ico">
+</head>
+<body data-theme="light">
+  <!-- Header -->
+  <header class="header">
+    <img src="./img/stackly.svg" alt="stackly logo">
+    <div class="switch-theme">
+      <div class="switch">
+        <input type="checkbox" id="switch-theme" class="switch__checkbox">
+        <label for="switch-theme" class="switch__label"></label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Bar -->
+  <section class="generator container">
+    <form
+      id="search-quote"
+      autocomplete="off"
+      class="generator__search-bar"
+    >
+      <div class="text-field">
+        <input
+          type="text"
+          id="search-text-field"
+          class="text-field__input"
+          placeholder="Author..."
+        >
+        <span class="material-icons text-field__icon">search</span>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          id="search-btn"
+          class="btn btn--primary"
+        >search</button>
+      </div>
+    </form>
+
+    <button
+      type="submit"
+      id="random-btn"
+      class="btn btn--light btn--elevation btn--icon"
+      >
+      random
+      <span class="material-icons">
+        autorenew
+      </span>
+    </button>
+  </section>
+
+  <!-- Quotes -->
+  <main class="quotes container">
+    <div class="quotes__loader" id="quotes-loader">
+      <svg class="spinner">
+        <circle r="25" cx="27" cy="27"></circle>
+      </svg>
+    </div>
+    <h2 class="quotes__author" id="quotes-author"></h2>
+    
+    <section class="quotes__wrapper" id="quotes"></section>
+  </main>
+
+  <footer class="footer">
+    <img src="./img/stackly.svg" alt="stackly logo">
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

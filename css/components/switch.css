@@ -1,0 +1,37 @@
+/* Switch */
+
+.switch {
+  position: relative;
+}
+.switch__checkbox {
+  display: none;
+}
+.switch__label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 15px;
+  background-color: var(--color-grey);
+  border-radius: 20px;
+}
+.switch__label::before {
+  content: '\e518';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--color-light);
+  box-shadow: var(--shadow-switch);
+  transform: translateY(-50%);
+  font-family: 'Material Icons';
+  text-align: center;
+  transition-duration: .3s;
+}
+.switch__checkbox:checked + .switch__label::before {
+  content: '\e51c';
+  left: calc(100% - 20px);
+  color: #ffffff;
+}

@@ -1,0 +1,8 @@
+export const searchQuote = document.getElementById('search-quote')
+export const searchTextField = document.getElementById('search-text-field')
+export const searchBtn = document.getElementById('search-btn')
+export const randomBtn = document.getElementById('random-btn')
+export const quotesWrapper = document.getElementById('quotes')
+export const quotesAuthor = document.getElementById('quotes-author')
+export const quotesLoader = document.getElementById('quotes-loader')
+export const switchTheme = document.getElementById('switch-theme')

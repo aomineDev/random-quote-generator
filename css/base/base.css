@@ -1,0 +1,27 @@
+/* BASE */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--scrollbar);
+}
+
+body {
+  background-color: var(--color-grey);
+  font-family: var(--font-base);
+  font-size: var(--font-size-md-1);
+  color: var(--color-text);
+  transition: background-color .3s;
+}
+
+button,
+a {
+  user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}

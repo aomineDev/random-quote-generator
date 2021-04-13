@@ -1,0 +1,17 @@
+/* CONTAINER */
+
+.container {
+	max-width: 768px;
+	width: 100%;
+	height: 100%;
+  padding-right: var(--app-padding);
+  padding-left: var(--app-padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    max-width: 1440px;
+  }
+}

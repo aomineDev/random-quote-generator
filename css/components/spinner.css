@@ -1,0 +1,27 @@
+/* SPINNER */
+
+.spinner {
+  width: 54px;
+  height: 54px;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke: var(--color-primary);
+  stroke-dasharray: 130;
+  animation: spinner 2s infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    stroke-dashoffset: 130;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    stroke-dashoffset: 130;
+    transform: rotate(1800deg);
+  }
+}
