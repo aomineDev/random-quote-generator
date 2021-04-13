@@ -9,3 +9,9 @@
   height: 100px;
   transition: background-color .3s;
 }
+
+@media only screen and (max-width: 425px) {
+  .header {
+    height: 80px;
+  }
+}

@@ -6,3 +6,9 @@
   right: 40px;
   transform: translateY(-50%);
 }
+
+@media only screen and (max-width: 425px) {
+  .switch-theme {
+    right: 20px;
+  }
+}
