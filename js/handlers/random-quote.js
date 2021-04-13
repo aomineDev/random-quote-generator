@@ -1,4 +1,4 @@
-import { getQuotes } from '../services/quote-garden.js'
+import { getRandomQuotes } from '../services/quote-garden.js'
 
 import clearQuotes from '../utils/clear-quotes.js'
 import toggleUI from '../utils/toggleUi.js'
@@ -9,7 +9,7 @@ export default async function handleRandomQuote () {
   toggleUI()
 
   try {
-    const quotes = await getQuotes({})
+    const quotes = await getRandomQuotes()
 
     toggleUI()
 
