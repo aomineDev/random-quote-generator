@@ -13,7 +13,7 @@ export default async function handleRandomQuote () {
 
     toggleUI()
 
-    renderQuotes({ author: 'Random', quotes })
+    renderQuotes({ author: 'Random Quotes', quotes })
   } catch (error) {
     console.error(error)
   }
