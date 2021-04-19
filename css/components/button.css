@@ -43,7 +43,7 @@
 
 /* Feats */
 .btn--elevation {
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-base);
 }
 
 .btn--icon {

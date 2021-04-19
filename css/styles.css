@@ -16,6 +16,7 @@
 @import url('./components/switch.css');
 
 /* Layouts */
+@import url('./layouts/loader.css');
 @import url('./layouts/header.css');
 @import url('./layouts/switch-theme.css');
 @import url('./layouts/generator.css');

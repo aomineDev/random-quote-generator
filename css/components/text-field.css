@@ -9,7 +9,7 @@
   width: 100%;
   background-color: var(--color-light);
   border-radius: var(--base-border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-base);
   min-height: 42px;
   padding-left: 16px;
   padding-right: 40px;

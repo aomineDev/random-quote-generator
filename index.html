@@ -10,6 +10,11 @@
   <link rel="shortcut icon" href="https://aomineDev.github.io/ico/aomine.ico">
 </head>
 <body data-theme="light">
+  <!-- Loader Screen -->
+  <div class="loader" id="loader-screen">
+    <img src="./img/stackly.svg" alt="stackly logo" class="loader__logo">
+  </div>
+
   <!-- Header -->
   <header class="header">
     <img src="./img/stackly.svg" alt="stackly logo">
@@ -34,6 +39,7 @@
           id="search-text-field"
           class="text-field__input"
           placeholder="Author..."
+          required
         >
         <span class="material-icons text-field__icon">search</span>
       </div>
@@ -61,14 +67,15 @@
 
   <!-- Quotes -->
   <main class="quotes container">
+    <h2 class="quotes__title" id="quotes-title"></h2>
+    
+    <section class="quotes__wrapper" id="quotes"></section>
+
     <div class="quotes__loader" id="quotes-loader">
       <svg class="spinner">
         <circle r="25" cx="27" cy="27"></circle>
       </svg>
     </div>
-    <h2 class="quotes__author" id="quotes-author"></h2>
-    
-    <section class="quotes__wrapper" id="quotes"></section>
   </main>
 
   <footer class="footer">

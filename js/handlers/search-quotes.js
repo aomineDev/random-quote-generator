@@ -1,9 +1,9 @@
-import { getQuotes } from '../services/quote-garden.js'
+import { getQuotesbyAuthor } from '../services/quote-garden.js'
 
 import { searchTextField } from '../elemets.js'
 
 import clearQuotes from '../utils/clear-quotes.js'
-import toggleUI from '../utils/toggleUi.js'
+import toggleLoader from '../utils/toggleLoader.js'
 import renderQuotes from '../utils/render-quotes.js'
 
 export default async function handleSearchQuote (e) {
@@ -14,16 +14,16 @@ export default async function handleSearchQuote (e) {
   if (author === '') return
 
   clearQuotes()
-  toggleUI()
+  toggleLoader()
 
   try {
-    const quotes = await getQuotes({ author })
+    const quotes = await getQuotesbyAuthor({ author })
 
     searchTextField.value = ''
     searchTextField.focus()
-    toggleUI()
+    toggleLoader()
 
-    renderQuotes({ author, quotes })
+    renderQuotes({ title: author, quotes, author })
   } catch (error) {
     console.error(error)
   }  

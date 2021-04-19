@@ -1,0 +1,26 @@
+/* LOADER */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  transition: .3s;
+}
+.is-complete {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader__logo {
+  animation: loader 1s infinite;
+}
+@keyframes loader {
+  50% {
+    transform: scale(1.1);
+  }
+}

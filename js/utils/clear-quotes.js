@@ -1,6 +1,6 @@
-import { quotesAuthor, quotesWrapper } from '../elemets.js'
+import { quotesTitle, quotesWrapper } from '../elemets.js'
 
 export default function clearQuotes () {
-  quotesAuthor.innerHTML = ''
+  quotesTitle.innerHTML = ''
   quotesWrapper.innerHTML = ''
 }

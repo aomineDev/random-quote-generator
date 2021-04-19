@@ -1,6 +1,15 @@
 import config from '../config/index.js'
 
-async function getQuotes ({ author }) {
+async function getQuotes () {
+  let apiUrl = `${config.apiBaseUrl}?limit=4`
+
+  const response = await fetch(apiUrl)
+  const { data } = await response.json()
+
+  return data
+}
+
+async function getQuotesbyAuthor ({ author }) {
   let apiUrl = `${config.apiBaseUrl}?author=${author}&limit=4`
     
 
@@ -22,5 +31,6 @@ async function getRandomQuotes () {
 
 export {
   getQuotes,
+  getQuotesbyAuthor,
   getRandomQuotes
 }
