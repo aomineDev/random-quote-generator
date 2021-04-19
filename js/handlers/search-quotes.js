@@ -1,15 +1,15 @@
-import { getQuotesbyAuthor } from '../services/quote-garden.js'
+import { quotesTitle, searchQuoteInput, loadMoreQuotesBtn } from '../elemets.js'
 
-import { searchTextField } from '../elemets.js'
+import { getQuotesbyAuthor } from '../services/quote-garden.js'
 
 import clearQuotes from '../utils/clear-quotes.js'
 import toggleLoader from '../utils/toggleLoader.js'
 import renderQuotes from '../utils/render-quotes.js'
 
-export default async function handleSearchQuote (e) {
+async function handleSearchQuotes (e) {
   e.preventDefault()
 
-  const author = searchTextField.value
+  const author = searchQuoteInput.value
 
   if (author === '') return
 
@@ -19,12 +19,20 @@ export default async function handleSearchQuote (e) {
   try {
     const quotes = await getQuotesbyAuthor({ author })
 
-    searchTextField.value = ''
-    searchTextField.focus()
+    searchQuoteInput.value = ''
+    searchQuoteInput.focus()
     toggleLoader()
 
-    renderQuotes({ title: author, quotes, author })
+    quotesTitle.innerHTML = author
+
+    loadMoreQuotesBtn.dataset.type = 'search'
+    loadMoreQuotesBtn.dataset.author = author
+    loadMoreQuotesBtn.dataset.page = 1
+
+    renderQuotes({ quotes, withAuthor: false })
   } catch (error) {
     console.error(error)
   }  
 }
+
+export default handleSearchQuotes

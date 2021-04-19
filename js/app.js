@@ -1,14 +1,25 @@
-import { switchTheme, searchQuote, randomBtn } from './elemets.js'
+import {
+  switchTheme,
+  searchQuoteForm,
+  randomQuotesBtn,
+  loadMoreQuotesBtn
+} from './elemets.js'
 
-import handleSwitchTheme from './handlers/switch-theme.js'
-import handleInitialQuotes from './handlers/initial-quotes.js'
-import handleSearchQuotes from './handlers/search-quotes.js'
-import handleRandomQuotes from './handlers/random-quotes.js'
+import {
+  handleSwitchTheme,
+  handleInitialQuotes,
+  handleSearchQuotes,
+  handleRandomQuotes,
+  handleLoadMoreQuotes
+} from './handlers/index.js'
+
 
 document.addEventListener('DOMContentLoaded', handleInitialQuotes)
 
 switchTheme.addEventListener('click', handleSwitchTheme)
 
-searchQuote.addEventListener('submit', handleSearchQuotes)
+searchQuoteForm.addEventListener('submit', handleSearchQuotes)
 
-randomBtn.addEventListener('click', handleRandomQuotes)
+randomQuotesBtn.addEventListener('click', handleRandomQuotes)
+
+loadMoreQuotesBtn.addEventListener('click', handleLoadMoreQuotes)

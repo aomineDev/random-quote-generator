@@ -29,14 +29,14 @@
   <!-- Search Bar -->
   <section class="generator container">
     <form
-      id="search-quote"
+      id="search-quote-form"
       autocomplete="off"
       class="generator__search-bar"
     >
       <div class="text-field">
         <input
           type="text"
-          id="search-text-field"
+          id="search-quote-input"
           class="text-field__input"
           placeholder="Author..."
           required
@@ -47,15 +47,14 @@
       <div>
         <button
           type="submit"
-          id="search-btn"
+          id="search-quote-btn"
           class="btn btn--primary"
         >search</button>
       </div>
     </form>
 
     <button
-      type="submit"
-      id="random-btn"
+      id="random-quotes-btn"
       class="btn btn--light btn--elevation btn--icon"
       >
       random
@@ -70,6 +69,21 @@
     <h2 class="quotes__title" id="quotes-title"></h2>
     
     <section class="quotes__wrapper" id="quotes"></section>
+
+    <div class="quotes__load-more">
+      <button
+        id="load-more-quotes-btn"
+        class="btn btn--light btn--elevation btn--icon"
+        data-type="initial"
+        data-page="1"
+        data-author="" 
+        >
+        load more
+        <span class="material-icons">
+          post_add
+        </span>
+      </button>
+    </div>
 
     <div class="quotes__loader" id="quotes-loader">
       <svg class="spinner">

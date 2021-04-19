@@ -1,8 +1,9 @@
-import { searchTextField, searchBtn, randomBtn, quotesLoader } from '../elemets.js'
+import { searchQuoteInput, searchQuoteBtn, randomQuotesBtn, quotesLoader, loadMoreQuotesBtn } from '../elemets.js'
 
-export default function toggleUI () {
-  searchTextField.disabled = !searchTextField.disabled
-  searchBtn.disabled = !searchBtn.disabled
-  randomBtn.disabled = !randomBtn.disabled
+export default function toggleLoader () {
+  searchQuoteInput.disabled = !searchQuoteInput.disabled
+  searchQuoteBtn.disabled = !searchQuoteBtn.disabled
+  randomQuotesBtn.disabled = !randomQuotesBtn.disabled
   quotesLoader.classList.toggle('is-loading')
+  loadMoreQuotesBtn.style.display = searchQuoteBtn.disabled ? 'none' : 'flex'
 }

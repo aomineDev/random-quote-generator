@@ -68,3 +68,9 @@
 .quotes__not-found__text {
   color: var(--color-label);
 }
+
+.quotes__load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

@@ -1,10 +1,12 @@
+import { quotesTitle, loadMoreQuotesBtn } from '../elemets.js'
+
 import { getRandomQuotes } from '../services/quote-garden.js'
 
 import clearQuotes from '../utils/clear-quotes.js'
 import toggleLoader from '../utils/toggleLoader.js'
 import renderQuotes from '../utils/render-quotes.js'
 
-export default async function handleRandomQuote () {
+async function handleRandomQuotes () {
   clearQuotes()
   toggleLoader()
 
@@ -13,8 +15,14 @@ export default async function handleRandomQuote () {
 
     toggleLoader()
 
-    renderQuotes({ title: 'Random Quotes', quotes })
+    quotesTitle.innerHTML = 'Random Quotes'
+    
+    loadMoreQuotesBtn.dataset.type = 'random'
+
+    renderQuotes({ quotes })
   } catch (error) {
     console.error(error)
   }
 }
+
+export default handleRandomQuotes

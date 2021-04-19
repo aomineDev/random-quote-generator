@@ -10,7 +10,8 @@
   display: grid;
   place-items: center;
   z-index: 100;
-  transition: .3s;
+  transition-property: opacity, visibility;
+  transition-duration: .5s;
 }
 .is-complete {
   opacity: 0;

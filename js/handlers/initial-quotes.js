@@ -1,17 +1,21 @@
-import { loaderScreen } from '../elemets.js'
+import { quotesTitle, loaderScreen } from '../elemets.js'
 
 import { getQuotes } from '../services/quote-garden.js'
 
 import renderQuotes from '../utils/render-quotes.js'
 
-export default async function handleInitialQuotes () {
+async function handleInitialQuotes () {
   try {
-    const quotes = await getQuotes()
+    const quotes = await getQuotes({})
 
     loaderScreen.classList.add('is-complete')
 
-    renderQuotes({ title: 'Last Quotes', quotes })
+    quotesTitle.innerHTML = 'Last Quotes'
+
+    renderQuotes({ quotes })
   } catch (error) {
     console.error(error)
   }
 }
+
+export default handleInitialQuotes
